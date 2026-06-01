@@ -58,6 +58,7 @@ print('Valor minimo:',df_dados['CL_FHL'].min())
 print('Valor média:',df_dados['CL_FHL'].mean())
 print('Valor desvio padrão:',df_dados['CL_FHL'].std())
 print('Valor mediana:',df_dados['CL_FHL'].median())
+print('Valor moda:',df_dados['CL_FHL'].mode())
 print("="*40)
 
 #4.APLICAÇÃO DAS REGRAS DE LIMPEZA
@@ -76,7 +77,8 @@ print('Padronização de texto')
 def padronizar_campos_texto(df): #Remover espaços extras e colocar tudo em maiusculo 
     for col in ['PR_CAT','PR_NOME']:
         df[col]=df[col].astype(str).str.strip().str.upper()
-padronizar_campos_texto(df_dados)
+    return df
+df_dados=padronizar_campos_texto(df_dados)
 print("="*40)
 
 #Conversão de data para datatime
@@ -85,7 +87,7 @@ def padronizar_datas(df):
     df['DATA']=pd.to_datetime(df['DATA'],errors='coerce')
     df=df.dropna(subset=['DATA'])
     return df
-padronizar_datas(df_dados)
+df_dados=padronizar_datas(df_dados)
 print("="*40)
 
 #Tratamento de Nulos 
