@@ -1,9 +1,9 @@
 ## Análise de Dados de Varejo
 
-Nome: Suellen Santos 
-Curso: Visualização de Dados e BI
-Professor: Rodrigo Brunini
-Instituição: SENAI (SCTech)
+Nome: Suellen Santos - 
+Curso: Visualização de Dados e BI -
+Professor: Rodrigo Brunini -
+Instituição: SENAI (SCTech) -
 
 ---
 #### Descrição
